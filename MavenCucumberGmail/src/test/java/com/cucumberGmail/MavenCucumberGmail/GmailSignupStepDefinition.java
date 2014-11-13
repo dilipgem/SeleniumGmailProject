@@ -25,6 +25,8 @@ import com.cucumberGmail.MavenCucumberGmail.PageObjects.LoginPage;
 import com.cucumberGmail.MavenCucumberGmail.PageObjects.SignupPage;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,6 +38,16 @@ public class GmailSignupStepDefinition extends AbstractBaseClass {
 	// public ErrorCollector collector = new ErrorCollector();
 
 	private String missingFieldMsg;
+	
+	@Before
+	public void setUp() throws Throwable {
+		driver.manage().window().maximize();
+	}
+
+	@After
+	public void tearDown() throws Throwable {
+		driver.quit();
+	}
 
 	@Given("^I am on Gmail Loginpage$")
 	public void navigateToGmailLoginpage() throws Throwable {
