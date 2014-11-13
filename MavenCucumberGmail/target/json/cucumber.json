@@ -1,0 +1,100 @@
+[
+  {
+    "id": "gmail-signup-feature",
+    "description": "",
+    "name": "Gmail Signup feature",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "id": "gmail-signup-feature;to-test-signup-page-for-validation-messages.",
+        "description": "",
+        "name": "To test Signup page for validation messages.",
+        "keyword": "Scenario",
+        "line": 3,
+        "steps": [
+          {
+            "result": {
+              "duration": 29805043604,
+              "status": "passed"
+            },
+            "name": "I am on Gmail Loginpage",
+            "keyword": "Given ",
+            "line": 4,
+            "match": {
+              "location": "GmailSignupStepDefinition.navigateToGmailLoginpage()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1074287979,
+              "status": "passed"
+            },
+            "name": "I click on the Signup page",
+            "keyword": "When ",
+            "line": 5,
+            "match": {
+              "location": "GmailSignupStepDefinition.clickOnSignupLink()"
+            }
+          },
+          {
+            "result": {
+              "duration": 10926174751,
+              "status": "passed"
+            },
+            "name": "I click on the Next button without entering mandatory fields",
+            "keyword": "And ",
+            "line": 6,
+            "match": {
+              "location": "GmailSignupStepDefinition.enterUserData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "fields",
+                  "value"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "FirstName",
+                  "TestFirstName"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "LastName",
+                  "TestLastName"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "UserID",
+                  ""
+                ],
+                "line": 10
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 192856737,
+              "status": "passed"
+            },
+            "name": "It should display an appropriate error message",
+            "keyword": "Then ",
+            "line": 11,
+            "match": {
+              "location": "GmailSignupStepDefinition.validateError()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "GmailSignup.feature"
+  }
+]
